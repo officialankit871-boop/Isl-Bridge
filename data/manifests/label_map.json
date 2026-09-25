@@ -1,0 +1,608 @@
+{
+  "class_000": {
+    "label_id": "class_000",
+    "sentence": "are you free today",
+    "class_name": "are_you_free_today",
+    "gloss": "YOU FREE TODAY"
+  },
+  "class_001": {
+    "label_id": "class_001",
+    "sentence": "are you hiding something",
+    "class_name": "are_you_hiding_something",
+    "gloss": "YOU HIDE SOMETHING"
+  },
+  "class_002": {
+    "label_id": "class_002",
+    "sentence": "bring water for me",
+    "class_name": "bring_water_for_me",
+    "gloss": "BRING WATER ME"
+  },
+  "class_003": {
+    "label_id": "class_003",
+    "sentence": "can i help you",
+    "class_name": "can_i_help_you",
+    "gloss": "I HELP YOU"
+  },
+  "class_004": {
+    "label_id": "class_004",
+    "sentence": "can you repeat that please",
+    "class_name": "can_you_repeat_that_please",
+    "gloss": "YOU REPEAT PLEASE"
+  },
+  "class_005": {
+    "label_id": "class_005",
+    "sentence": "comb your hair",
+    "class_name": "comb_your_hair",
+    "gloss": "COMB YOU HAIR"
+  },
+  "class_006": {
+    "label_id": "class_006",
+    "sentence": "congratulations",
+    "class_name": "congratulations",
+    "gloss": "CONGRATULATIIONS"
+  },
+  "class_007": {
+    "label_id": "class_007",
+    "sentence": "could you please talk slower",
+    "class_name": "could_you_please_talk_slower",
+    "gloss": "YOU PLEASE TALK SLOWER"
+  },
+  "class_008": {
+    "label_id": "class_008",
+    "sentence": "do me a favour",
+    "class_name": "do_me_a_favour",
+    "gloss": "DO ME FAVOUR"
+  },
+  "class_009": {
+    "label_id": "class_009",
+    "sentence": "do not abuse him",
+    "class_name": "do_not_abuse_him",
+    "gloss": "DONOT ABUSE HIM"
+  },
+  "class_010": {
+    "label_id": "class_010",
+    "sentence": "do not be stubborn",
+    "class_name": "do_not_be_stubborn",
+    "gloss": "DONOT BE STUBBORN"
+  },
+  "class_011": {
+    "label_id": "class_011",
+    "sentence": "do not hurt me",
+    "class_name": "do_not_hurt_me",
+    "gloss": "DONOT HURT ME"
+  },
+  "class_012": {
+    "label_id": "class_012",
+    "sentence": "do not make me angry",
+    "class_name": "do_not_make_me_angry",
+    "gloss": "DO NOT MAKE ME ANGRY"
+  },
+  "class_013": {
+    "label_id": "class_013",
+    "sentence": "do not take it to the heart",
+    "class_name": "do_not_take_it_to_the_heart",
+    "gloss": "DO NOT TAKE IT HEART"
+  },
+  "class_014": {
+    "label_id": "class_014",
+    "sentence": "do not worry",
+    "class_name": "do_not_worry",
+    "gloss": "DO NOT WORRY"
+  },
+  "class_015": {
+    "label_id": "class_015",
+    "sentence": "do you need something",
+    "class_name": "do_you_need_something",
+    "gloss": "DO YOU NEED SOMETHING"
+  },
+  "class_016": {
+    "label_id": "class_016",
+    "sentence": "go and sleep",
+    "class_name": "go_and_sleep",
+    "gloss": "GO SLEEP"
+  },
+  "class_017": {
+    "label_id": "class_017",
+    "sentence": "had your food",
+    "class_name": "had_your_food",
+    "gloss": "YOUR FOOD"
+  },
+  "class_018": {
+    "label_id": "class_018",
+    "sentence": "he came by train",
+    "class_name": "he_came_by_train",
+    "gloss": "HE CAME TRAIN"
+  },
+  "class_019": {
+    "label_id": "class_019",
+    "sentence": "He is going into the room",
+    "class_name": "he_is_going_into_the_room",
+    "gloss": "HE GO  INTO  ROOM"
+  },
+  "class_020": {
+    "label_id": "class_020",
+    "sentence": "he is on the way",
+    "class_name": "he_is_on_the_way",
+    "gloss": "HE ON WAY"
+  },
+  "class_021": {
+    "label_id": "class_021",
+    "sentence": "he she is my friend",
+    "class_name": "he_she_is_my_friend",
+    "gloss": "HE SHE MY FRIEND"
+  },
+  "class_022": {
+    "label_id": "class_022",
+    "sentence": "he would be coming today",
+    "class_name": "he_would_be_coming_today",
+    "gloss": "HE COMING TODAY"
+  },
+  "class_023": {
+    "label_id": "class_023",
+    "sentence": "help me",
+    "class_name": "help_me",
+    "gloss": "HELP ME"
+  },
+  "class_024": {
+    "label_id": "class_024",
+    "sentence": "hi how are you",
+    "class_name": "hi_how_are_you",
+    "gloss": "HI HOW YOU"
+  },
+  "class_025": {
+    "label_id": "class_025",
+    "sentence": "how are things",
+    "class_name": "how_are_things",
+    "gloss": "HOW THINGS"
+  },
+  "class_026": {
+    "label_id": "class_026",
+    "sentence": "how can i help you",
+    "class_name": "how_can_i_help_you",
+    "gloss": "HOW I HELP YOU"
+  },
+  "class_027": {
+    "label_id": "class_027",
+    "sentence": "how can i trust you",
+    "class_name": "how_can_i_trust_you",
+    "gloss": "HOW I TRUST YOU"
+  },
+  "class_028": {
+    "label_id": "class_028",
+    "sentence": "how dare you",
+    "class_name": "how_dare_you",
+    "gloss": "HOW DARE YOU"
+  },
+  "class_029": {
+    "label_id": "class_029",
+    "sentence": "how old are you",
+    "class_name": "how_old_are_you",
+    "gloss": "HOW OLD YOU"
+  },
+  "class_030": {
+    "label_id": "class_030",
+    "sentence": "i am (age)",
+    "class_name": "i_am_(age)",
+    "gloss": "I (AGE)"
+  },
+  "class_031": {
+    "label_id": "class_031",
+    "sentence": "i am afraid of that",
+    "class_name": "i_am_afraid_of_that",
+    "gloss": "I AFRAID THAT"
+  },
+  "class_032": {
+    "label_id": "class_032",
+    "sentence": "i am crying",
+    "class_name": "i_am_crying",
+    "gloss": "I CRY"
+  },
+  "class_033": {
+    "label_id": "class_033",
+    "sentence": "i am feeling bored",
+    "class_name": "i_am_feeling_bored",
+    "gloss": "I FEELING BORED"
+  },
+  "class_034": {
+    "label_id": "class_034",
+    "sentence": "i am feeling cold",
+    "class_name": "i_am_feeling_cold",
+    "gloss": "I FEELING COLD"
+  },
+  "class_035": {
+    "label_id": "class_035",
+    "sentence": "i am fine. thank you sir",
+    "class_name": "i_am_fine._thank_you_sir",
+    "gloss": "I FINE. THANK YOU SIR"
+  },
+  "class_036": {
+    "label_id": "class_036",
+    "sentence": "i am hungry",
+    "class_name": "i_am_hungry",
+    "gloss": "I HUNGRY"
+  },
+  "class_037": {
+    "label_id": "class_037",
+    "sentence": "i am in dilemma what to do",
+    "class_name": "i_am_in_dilemma_what_to_do",
+    "gloss": "I IN DILEMMA WHAT TO DO"
+  },
+  "class_038": {
+    "label_id": "class_038",
+    "sentence": "i am not really sure",
+    "class_name": "i_am_not_really_sure",
+    "gloss": "I NOT REALLY SURE"
+  },
+  "class_039": {
+    "label_id": "class_039",
+    "sentence": "i am really grateful",
+    "class_name": "i_am_really_grateful",
+    "gloss": "I REALLY GRATEFUL"
+  },
+  "class_040": {
+    "label_id": "class_040",
+    "sentence": "i am sitting in the class",
+    "class_name": "i_am_sitting_in_the_class",
+    "gloss": "I SITTING IN THE CLASS"
+  },
+  "class_041": {
+    "label_id": "class_041",
+    "sentence": "i am so sorry to hear that",
+    "class_name": "i_am_so_sorry_to_hear_that",
+    "gloss": "I AM SO SORRY TO HEAR THAT"
+  },
+  "class_042": {
+    "label_id": "class_042",
+    "sentence": "i am suffering from fever",
+    "class_name": "i_am_suffering_from_fever",
+    "gloss": "I SUFFERING FROM FEVER"
+  },
+  "class_043": {
+    "label_id": "class_043",
+    "sentence": "i am tired",
+    "class_name": "i_am_tired",
+    "gloss": "I TIRED"
+  },
+  "class_044": {
+    "label_id": "class_044",
+    "sentence": "i am very happy",
+    "class_name": "i_am_very_happy",
+    "gloss": "I VERY HAPPY"
+  },
+  "class_045": {
+    "label_id": "class_045",
+    "sentence": "i can not help you there",
+    "class_name": "i_can_not_help_you_there",
+    "gloss": "I NOT HELP YOU THERE"
+  },
+  "class_046": {
+    "label_id": "class_046",
+    "sentence": "i do not agree",
+    "class_name": "i_do_not_agree",
+    "gloss": "I DONOT AGREE"
+  },
+  "class_047": {
+    "label_id": "class_047",
+    "sentence": "i do not like it",
+    "class_name": "i_do_not_like_it",
+    "gloss": "I DO NOT LIKE IT"
+  },
+  "class_048": {
+    "label_id": "class_048",
+    "sentence": "i do not mean it",
+    "class_name": "i_do_not_mean_it",
+    "gloss": "I DO NOT MEAN IT"
+  },
+  "class_049": {
+    "label_id": "class_049",
+    "sentence": "i dont agree",
+    "class_name": "i_dont_agree",
+    "gloss": "I DONT AGREE"
+  },
+  "class_050": {
+    "label_id": "class_050",
+    "sentence": "i enjoyed a lot",
+    "class_name": "i_enjoyed_a_lot",
+    "gloss": "I ENJOYED A LOT"
+  },
+  "class_051": {
+    "label_id": "class_051",
+    "sentence": "i got hurt",
+    "class_name": "i_got_hurt",
+    "gloss": "I GOT HURT"
+  },
+  "class_052": {
+    "label_id": "class_052",
+    "sentence": "i like you i love you",
+    "class_name": "i_like_you_i_love_you",
+    "gloss": "I LIKE YOU I LOVE YOU"
+  },
+  "class_053": {
+    "label_id": "class_053",
+    "sentence": "i need water",
+    "class_name": "i_need_water",
+    "gloss": "I NEED WATER"
+  },
+  "class_054": {
+    "label_id": "class_054",
+    "sentence": "i promise",
+    "class_name": "i_promise",
+    "gloss": "I PROMISE"
+  },
+  "class_055": {
+    "label_id": "class_055",
+    "sentence": "i really appreciate it",
+    "class_name": "i_really_appreciate_it",
+    "gloss": "I REALLY APPRECIATE IT"
+  },
+  "class_056": {
+    "label_id": "class_056",
+    "sentence": "i somehow got to know about it",
+    "class_name": "i_somehow_got_to_know_about_it",
+    "gloss": "I SOMEHOW GOT KNOW ABOUT IT"
+  },
+  "class_057": {
+    "label_id": "class_057",
+    "sentence": "i was stopped by some one",
+    "class_name": "i_was_stopped_by_some_one",
+    "gloss": "I STOPPED BY SOMEONE"
+  },
+  "class_058": {
+    "label_id": "class_058",
+    "sentence": "it does not make any difference to me",
+    "class_name": "it_does_not_make_any_difference_to_me",
+    "gloss": "IT DO NOT MAKE ANY DIFFERENCE TO ME"
+  },
+  "class_059": {
+    "label_id": "class_059",
+    "sentence": "it was nice chatting with you",
+    "class_name": "it_was_nice_chatting_with_you",
+    "gloss": "IT NICE CHAT WITH YOU"
+  },
+  "class_060": {
+    "label_id": "class_060",
+    "sentence": "let him take time",
+    "class_name": "let_him_take_time",
+    "gloss": "LET HIM TAKE TIME"
+  },
+  "class_061": {
+    "label_id": "class_061",
+    "sentence": "my name is xxxxxxxx",
+    "class_name": "my_name_is_xxxxxxxx",
+    "gloss": "MY NAME XXXXXXXX"
+  },
+  "class_062": {
+    "label_id": "class_062",
+    "sentence": "nice to meet you",
+    "class_name": "nice_to_meet_you",
+    "gloss": "NICE MEET YOU"
+  },
+  "class_063": {
+    "label_id": "class_063",
+    "sentence": "No need to worry dont worry",
+    "class_name": "no_need_to_worry_dont_worry",
+    "gloss": "NO NEED WORRY DONT WORRY"
+  },
+  "class_064": {
+    "label_id": "class_064",
+    "sentence": "now onwards he will never hurt you",
+    "class_name": "now_onwards_he_will_never_hurt_you",
+    "gloss": "NOW ONWARDS HE NEVER HURT YOU"
+  },
+  "class_065": {
+    "label_id": "class_065",
+    "sentence": "pour some more water into the glass",
+    "class_name": "pour_some_more_water_into_the_glass",
+    "gloss": "POUR SOME MORE WATER INTO THE GLASS"
+  },
+  "class_066": {
+    "label_id": "class_066",
+    "sentence": "prepare the bed",
+    "class_name": "prepare_the_bed",
+    "gloss": "PREPARE BED"
+  },
+  "class_067": {
+    "label_id": "class_067",
+    "sentence": "serve the food",
+    "class_name": "serve_the_food",
+    "gloss": "SERVE FOOD"
+  },
+  "class_068": {
+    "label_id": "class_068",
+    "sentence": "shall we go outside",
+    "class_name": "shall_we_go_outside",
+    "gloss": "WE GO OUTSIDE"
+  },
+  "class_069": {
+    "label_id": "class_069",
+    "sentence": "speak softly",
+    "class_name": "speak_softly",
+    "gloss": "SPEAK SOFTLY"
+  },
+  "class_070": {
+    "label_id": "class_070",
+    "sentence": "take care of yourself",
+    "class_name": "take_care_of_yourself",
+    "gloss": "TAKE CARE OF YOURSELF"
+  },
+  "class_071": {
+    "label_id": "class_071",
+    "sentence": "tell me truth",
+    "class_name": "tell_me_truth",
+    "gloss": "TELL ME TRUTH"
+  },
+  "class_072": {
+    "label_id": "class_072",
+    "sentence": "thank you so much",
+    "class_name": "thank_you_so_much",
+    "gloss": "THANK YOU SO MUCH"
+  },
+  "class_073": {
+    "label_id": "class_073",
+    "sentence": "that is so kind of you",
+    "class_name": "that_is_so_kind_of_you",
+    "gloss": "THAT KIND YOU"
+  },
+  "class_074": {
+    "label_id": "class_074",
+    "sentence": "This place is beautiful",
+    "class_name": "this_place_is_beautiful",
+    "gloss": "THIS PLACE BEAUTIFUL"
+  },
+  "class_075": {
+    "label_id": "class_075",
+    "sentence": "try to understand",
+    "class_name": "try_to_understand",
+    "gloss": "TRY TO UNDERSTAND"
+  },
+  "class_076": {
+    "label_id": "class_076",
+    "sentence": "turn on light turn off light",
+    "class_name": "turn_on_light_turn_off_light",
+    "gloss": "TURN ON LIGHT TURN OFF LIGHT"
+  },
+  "class_077": {
+    "label_id": "class_077",
+    "sentence": "we are all with you",
+    "class_name": "we_are_all_with_you",
+    "gloss": "WE ALL WITH YOU"
+  },
+  "class_078": {
+    "label_id": "class_078",
+    "sentence": "wear the shirt",
+    "class_name": "wear_the_shirt",
+    "gloss": "WEAR SHIRT"
+  },
+  "class_079": {
+    "label_id": "class_079",
+    "sentence": "what are you doing",
+    "class_name": "what_are_you_doing",
+    "gloss": "WHAT YOU DO"
+  },
+  "class_080": {
+    "label_id": "class_080",
+    "sentence": "what did you tell him",
+    "class_name": "what_did_you_tell_him",
+    "gloss": "WHAT YOU TELL HIM"
+  },
+  "class_081": {
+    "label_id": "class_081",
+    "sentence": "what do you do",
+    "class_name": "what_do_you_do",
+    "gloss": "WHAT YOU DO"
+  },
+  "class_082": {
+    "label_id": "class_082",
+    "sentence": "what do you think",
+    "class_name": "what_do_you_think",
+    "gloss": "WHAT DO YOU THINK"
+  },
+  "class_083": {
+    "label_id": "class_083",
+    "sentence": "what do you want to become",
+    "class_name": "what_do_you_want_to_become",
+    "gloss": "WHAT DO YOU WANT BECOME"
+  },
+  "class_084": {
+    "label_id": "class_084",
+    "sentence": "what happened",
+    "class_name": "what_happened",
+    "gloss": "WHAT HAPPENED"
+  },
+  "class_085": {
+    "label_id": "class_085",
+    "sentence": "what have you planned for your career",
+    "class_name": "what_have_you_planned_for_your_career",
+    "gloss": "WHAT HAVE YOU PLAN YOUR CAREER"
+  },
+  "class_086": {
+    "label_id": "class_086",
+    "sentence": "what is your phone number",
+    "class_name": "what_is_your_phone_number",
+    "gloss": "WHAT YOUR PHONE NUMBER"
+  },
+  "class_087": {
+    "label_id": "class_087",
+    "sentence": "what you want",
+    "class_name": "what_you_want",
+    "gloss": "WHAT YOU WANT"
+  },
+  "class_088": {
+    "label_id": "class_088",
+    "sentence": "when will the train leave",
+    "class_name": "when_will_the_train_leave",
+    "gloss": "WHEN TRAIN LEAVE"
+  },
+  "class_089": {
+    "label_id": "class_089",
+    "sentence": "where are you from",
+    "class_name": "where_are_you_from",
+    "gloss": "WHERE YOU FROM"
+  },
+  "class_090": {
+    "label_id": "class_090",
+    "sentence": "which college school are you from",
+    "class_name": "which_collegeschool_are_you_from",
+    "gloss": "WHICH COLLEGE SCHOOL YOU FROM"
+  },
+  "class_091": {
+    "label_id": "class_091",
+    "sentence": "who are you",
+    "class_name": "who_are_you",
+    "gloss": "WHO YOU"
+  },
+  "class_092": {
+    "label_id": "class_092",
+    "sentence": "why are you angry",
+    "class_name": "why_are_you_angry",
+    "gloss": "WHY YOU ANGRY"
+  },
+  "class_093": {
+    "label_id": "class_093",
+    "sentence": "why are you crying",
+    "class_name": "why_are_you_crying",
+    "gloss": "WHY YOU CRY"
+  },
+  "class_094": {
+    "label_id": "class_094",
+    "sentence": "why are you disappointed",
+    "class_name": "why_are_you_disappointed",
+    "gloss": "WHY YOU DISAPPOINTED"
+  },
+  "class_095": {
+    "label_id": "class_095",
+    "sentence": "you are bad",
+    "class_name": "you_are_bad",
+    "gloss": "YOU BAD"
+  },
+  "class_096": {
+    "label_id": "class_096",
+    "sentence": "you are good",
+    "class_name": "you_are_good",
+    "gloss": "YOU GOOD"
+  },
+  "class_097": {
+    "label_id": "class_097",
+    "sentence": "you are welcome",
+    "class_name": "you_are_welcome",
+    "gloss": "YOU WELCOME"
+  },
+  "class_098": {
+    "label_id": "class_098",
+    "sentence": "you can do it",
+    "class_name": "you_can_do_it",
+    "gloss": "YOU DO IT"
+  },
+  "class_099": {
+    "label_id": "class_099",
+    "sentence": "you do anything, i do not care",
+    "class_name": "you_do_anything,_i_do_not_care",
+    "gloss": "YOU DO ANYTHING, I DO NOT CARE"
+  },
+  "class_100": {
+    "label_id": "class_100",
+    "sentence": "you need a medicine, take this one",
+    "class_name": "you_need_a_medicine,_take_this_one",
+    "gloss": "YOU NEED A MEDICINE, TAKE THIS ONE"
+  }
+}

@@ -1,3 +1,85 @@
+# ============================================
+# ISL-Bridge generated ML data
+# ============================================
+
+# Extracted landmark files
+data/processed/landmarks/*.npy
+
+# Generated sequences
+data/processed/sequences/*
+
+# Sign videos / raw dataset
+data/sign_videos/*
+data/raw/*
+
+# Training checkpoints
+checkpoints/
+
+# Trained model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Generated model artifacts
+models/*.pkl
+models/*.joblib
+
+# Generated plots and reports
+plots/
+reports/
+# ============================================
+# ISL-Bridge Project Specific
+# ============================================
+
+# Python virtual environments
+.venv/
+.venv310/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+
+# Keep the example environment file
+!.env.example
+
+# Dataset - DO NOT upload large dataset
+data/raw/
+data/dataset/
+data/videos/
+data/*.zip
+
+# ML training outputs
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+*.safetensors
+
+# Generated model files
+models/*.pkl
+models/*.joblib
+
+# Generated plots
+plots/
+
+# Generated reports
+reports/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+Thumbs.db
+.DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -216,3 +298,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Generated landmark files
+data/processed/landmarks/*.npy
+
+# Backup manifest
+data/manifests/manifest_backup.csv
+data/processed/landmarks/*
+!data/processed/landmarks/.gitkeep

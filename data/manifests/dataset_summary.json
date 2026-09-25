@@ -1,0 +1,348 @@
+{
+  "dataset_root": "data/raw/archive/ISL_CSLRT_Corpus/ISL_CSLRT_Corpus",
+  "total_classes": 101,
+  "total_videos": 687,
+  "valid_videos": 687,
+  "invalid_videos": 0,
+  "class_distribution": {
+    "class_000": 7,
+    "class_001": 7,
+    "class_002": 7,
+    "class_003": 8,
+    "class_004": 7,
+    "class_005": 7,
+    "class_006": 7,
+    "class_007": 7,
+    "class_008": 7,
+    "class_009": 6,
+    "class_010": 6,
+    "class_011": 7,
+    "class_012": 7,
+    "class_013": 7,
+    "class_014": 7,
+    "class_015": 7,
+    "class_016": 8,
+    "class_017": 7,
+    "class_018": 7,
+    "class_019": 7,
+    "class_020": 6,
+    "class_021": 7,
+    "class_022": 7,
+    "class_023": 7,
+    "class_024": 7,
+    "class_025": 6,
+    "class_026": 7,
+    "class_027": 7,
+    "class_028": 7,
+    "class_029": 7,
+    "class_030": 6,
+    "class_031": 7,
+    "class_032": 7,
+    "class_033": 7,
+    "class_034": 7,
+    "class_035": 7,
+    "class_036": 7,
+    "class_037": 7,
+    "class_038": 7,
+    "class_039": 7,
+    "class_040": 7,
+    "class_041": 7,
+    "class_042": 7,
+    "class_043": 7,
+    "class_044": 6,
+    "class_045": 7,
+    "class_046": 7,
+    "class_047": 7,
+    "class_048": 7,
+    "class_049": 1,
+    "class_050": 8,
+    "class_051": 7,
+    "class_052": 8,
+    "class_053": 7,
+    "class_054": 7,
+    "class_055": 7,
+    "class_056": 7,
+    "class_057": 7,
+    "class_058": 7,
+    "class_059": 7,
+    "class_060": 7,
+    "class_061": 7,
+    "class_062": 7,
+    "class_063": 1,
+    "class_064": 6,
+    "class_065": 7,
+    "class_066": 7,
+    "class_067": 9,
+    "class_068": 7,
+    "class_069": 8,
+    "class_070": 7,
+    "class_071": 6,
+    "class_072": 7,
+    "class_073": 7,
+    "class_074": 7,
+    "class_075": 7,
+    "class_076": 7,
+    "class_077": 7,
+    "class_078": 7,
+    "class_079": 7,
+    "class_080": 7,
+    "class_081": 6,
+    "class_082": 7,
+    "class_083": 7,
+    "class_084": 6,
+    "class_085": 3,
+    "class_086": 7,
+    "class_087": 7,
+    "class_088": 7,
+    "class_089": 6,
+    "class_091": 7,
+    "class_092": 7,
+    "class_093": 7,
+    "class_094": 7,
+    "class_095": 8,
+    "class_096": 7,
+    "class_097": 7,
+    "class_098": 7,
+    "class_099": 6,
+    "class_100": 7
+  },
+  "class_imbalance": {
+    "standard_deviation": 1.0347497623614468,
+    "classes_with_very_few_samples": {
+      "class_049": 1,
+      "class_063": 1
+    }
+  },
+  "video_statistics": {
+    "minimum_videos_per_class": 1,
+    "maximum_videos_per_class": 9,
+    "mean_videos_per_class": 6.8,
+    "median_videos_per_class": 7.0,
+    "average_duration_seconds": 4.019213973799126,
+    "minimum_duration_seconds": 1.0,
+    "maximum_duration_seconds": 180.0,
+    "average_fps": 25.0,
+    "resolution_distribution": {
+      "240x320": 195,
+      "1920x1080": 492
+    },
+    "extension_distribution": {
+      ".mp4": 687
+    }
+  },
+  "fps_statistics": {
+    "count": 687,
+    "average": 25.0,
+    "minimum": 25.0,
+    "maximum": 25.0,
+    "distribution": {
+      "25.0": 687
+    }
+  },
+  "resolution_distribution": {
+    "240x320": 195,
+    "1920x1080": 492
+  },
+  "signer_information": {
+    "available": false,
+    "message": "Signer metadata unavailable.",
+    "total_signers": 0,
+    "videos_per_signer": {},
+    "classes_per_signer": {}
+  },
+  "metadata_files": [
+    {
+      "filename": "ISL Corpus sign glosses.csv",
+      "sheet_name": "CSV",
+      "rows": 101,
+      "columns": [
+        "Sentence",
+        "SIGN GLOSSES"
+      ],
+      "sample_records": [
+        {
+          "Sentence": "are you free today",
+          "SIGN GLOSSES": "YOU FREE TODAY"
+        },
+        {
+          "Sentence": "are you hiding something",
+          "SIGN GLOSSES": "YOU HIDE SOMETHING"
+        },
+        {
+          "Sentence": "bring water for me",
+          "SIGN GLOSSES": "BRING WATER ME"
+        }
+      ],
+      "missing_values": {
+        "Sentence": 0,
+        "SIGN GLOSSES": 0
+      }
+    },
+    {
+      "filename": "ISL_CSLRT_Corpus details.xlsx",
+      "sheet_name": "Sheet1",
+      "rows": 493,
+      "columns": [
+        "Sentences",
+        "File location"
+      ],
+      "sample_records": [
+        {
+          "Sentences": "are you free today",
+          "File location": "ISL_CSLRT_Corpus\\Videos_Sentence_Level\\are you free today\\free (2).MP4"
+        },
+        {
+          "Sentences": "are you free today",
+          "File location": "ISL_CSLRT_Corpus\\Videos_Sentence_Level\\are you free today\\free (3).MP4"
+        },
+        {
+          "Sentences": "are you free today",
+          "File location": "ISL_CSLRT_Corpus\\Videos_Sentence_Level\\are you free today\\free (4).MP4"
+        }
+      ],
+      "missing_values": {
+        "Sentences": 1,
+        "File location": 0
+      }
+    },
+    {
+      "filename": "ISL_CSLRT_Corpus details.xlsx",
+      "sheet_name": "Sheet2",
+      "rows": 0,
+      "columns": [],
+      "sample_records": [],
+      "missing_values": {}
+    },
+    {
+      "filename": "ISL_CSLRT_Corpus details.xlsx",
+      "sheet_name": "Sheet3",
+      "rows": 0,
+      "columns": [],
+      "sample_records": [],
+      "missing_values": {}
+    },
+    {
+      "filename": "ISL_CSLRT_Corpus_frame_details.xlsx",
+      "sheet_name": "export_dataframe",
+      "rows": 18863,
+      "columns": [
+        "Sentence",
+        "Frames path"
+      ],
+      "sample_records": [
+        {
+          "Sentence": "are you free today",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Sentence_Level\\are you free today\\1\\are you free today 01.jpg"
+        },
+        {
+          "Sentence": "are you free today",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Sentence_Level\\are you free today\\1\\are you free today 02.jpg"
+        },
+        {
+          "Sentence": "are you free today",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Sentence_Level\\are you free today\\1\\are you free today 03.jpg"
+        }
+      ],
+      "missing_values": {
+        "Sentence": 0,
+        "Frames path": 0
+      }
+    },
+    {
+      "filename": "ISL_CSLRT_Corpus_word_details.xlsx",
+      "sheet_name": "export_dataframe",
+      "rows": 1036,
+      "columns": [
+        "Word",
+        "Frames path"
+      ],
+      "sample_records": [
+        {
+          "Word": "A LOT",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Word_Level\\A LOT\\A LOT (1).jpg"
+        },
+        {
+          "Word": "A LOT",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Word_Level\\A LOT\\A LOT (2).jpg"
+        },
+        {
+          "Word": "A LOT",
+          "Frames path": "ISL_CSLRT_Corpus\\Frames_Word_Level\\A LOT\\A LOT (3).jpg"
+        }
+      ],
+      "missing_values": {
+        "Word": 0,
+        "Frames path": 0
+      }
+    },
+    {
+      "filename": "ISL_CSLRT.txt",
+      "type": "TXT",
+      "rows": 2,
+      "columns": [],
+      "sample_records": [
+        {
+          "text": "ISL-CSLRT: Indian Sign Language Dataset for Continuous Sign Language Recognition and Translation"
+        },
+        {
+          "text": "The sentence-level completely labelled Indian Sign Language dataset for Sign Language Translation and Recognition (SLTR) research is developed. The dataset assists the research community to explore intuitive insights and to build the framework for establishing communication with the deaf and dumb community using advanced deep learning and computer vision methods for SLTR purposes. This ISL-CSLRT dataset aims in contributing the sentence level dataset created with two native signers of Navajeevan,  Residential School for the Deaf, College of Spl. D.Ed & B.Ed, Vocational Centre, and Child Care & Learning Centre, Ayyalurimetta, Andhra Pradesh, India on 28-12-2019 and five student volunteers from SASTRA Deemed University, Thanjavur, Tamilnadu. The ISL-CSLRT corpus consists of a large vocabulary of 700 fully annotated videos, 18863 Sentence level frames and 1036 word level images for 100 Spoken language Sentences performed by 7 different Signers. This corpus is arranged based on signer variants and time boundaries with fully annotated details. This corpus is made available publicly."
+        }
+      ],
+      "missing_values": {}
+    }
+  ],
+  "missing_metadata": {
+    "classes_without_gloss": [],
+    "signer": "Signer metadata unavailable."
+  },
+  "data_quality_warnings": {
+    "video_folders_without_sentence_metadata": [],
+    "metadata_sentences_without_video_folder": [
+      "which collegeschool are you from"
+    ]
+  },
+  "dataset_ready_for_next_stage": "YES_WITH_WARNINGS",
+  "warnings": {
+    "missing_video_files_referenced_by_metadata": [],
+    "unreadable_or_corrupted_videos": [],
+    "empty_class_folders": [],
+    "duplicate_file_paths": [],
+    "duplicate_filenames": [],
+    "zero_byte_files": [],
+    "invalid_fps": [],
+    "invalid_frame_count": [],
+    "non_positive_duration": [],
+    "extremely_short_videos": [
+      "Videos_Sentence_Level/are you free today/are you free today (2).mp4",
+      "Videos_Sentence_Level/can you repeat that please/can you repeat that please (7).mp4",
+      "Videos_Sentence_Level/he is on the way/he is on the way (2).mp4",
+      "Videos_Sentence_Level/he is on the way/he is on the way.mp4",
+      "Videos_Sentence_Level/help me/help me (6).mp4",
+      "Videos_Sentence_Level/help me/help me (7).mp4",
+      "Videos_Sentence_Level/how are things/how are things (2).mp4",
+      "Videos_Sentence_Level/how can i help you/how can i help you (1).mp4",
+      "Videos_Sentence_Level/i am so sorry to hear that/i am so sorry to hear that (2).mp4",
+      "Videos_Sentence_Level/speak softly/speak softly.mp4",
+      "Videos_Sentence_Level/what do you think/what do you think (7).mp4",
+      "Videos_Sentence_Level/what you want/what you want (7).mp4",
+      "Videos_Sentence_Level/where are you from/where are you from (6).mp4",
+      "Videos_Sentence_Level/you are bad/you are bad (2).mp4",
+      "Videos_Sentence_Level/you are bad/you are bad.mp4",
+      "Videos_Sentence_Level/you are good/you are good (2).mp4",
+      "Videos_Sentence_Level/you are welcome/you are welcome.mp4"
+    ],
+    "extremely_long_videos": [],
+    "classes_with_very_few_samples": {
+      "class_049": 1,
+      "class_063": 1
+    },
+    "missing_gloss": [],
+    "metadata_video_mismatches": {
+      "video_folders_without_sentence_metadata": [],
+      "metadata_sentences_without_video_folder": [
+        "which collegeschool are you from"
+      ]
+    },
+    "missing_label_metadata": []
+  }
+}
