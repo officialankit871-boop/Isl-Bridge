@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 import logging
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from backend.api.routes_health import router as health_router
+from backend.api.routes_predict import router as predict_router
 from backend.core.config import get_settings
 from backend.core.constants import SERVICE_NAME
+from backend.services.inference_service import get_inference_service
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +26,24 @@ def configure_logging(log_level: str) -> None:
     )
 
 
+@asynccontextmanager
+async def lifespan(application: FastAPI):
+    """Load and cache the inference model once when the backend starts."""
+    settings = get_settings()
+    service = get_inference_service()
+    application.state.inference_service = service
+    logger.info(
+        "ISL Bridge Backend | Environment=%s | Device=%s | Model=CNN-BiLSTM | Classes=%s | Input dimension=%s | Max frames=%s | Checkpoint=%s",
+        settings.environment,
+        service.device,
+        service.num_classes,
+        service.input_dim,
+        service.max_frames,
+        service.checkpoint_path,
+    )
+    yield
+
+
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
     settings = get_settings()
@@ -32,6 +53,7 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version=settings.app_version,
         description="Backend service for the ISL Bridge communication system.",
+        lifespan=lifespan,
     )
 
     application.add_middleware(
@@ -62,6 +84,7 @@ def create_app() -> FastAPI:
         )
 
     application.include_router(health_router)
+    application.include_router(predict_router)
     return application
 
 

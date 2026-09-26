@@ -1,6 +1,9 @@
 """Application configuration loaded from environment variables."""
 
+from __future__ import annotations
+
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -13,6 +16,10 @@ class Settings(BaseSettings):
     app_version: str = Field(default="0.1.0", validation_alias="APP_VERSION")
     environment: str = Field(default="development", validation_alias="ENVIRONMENT")
     log_level: str = Field(default="INFO", validation_alias="LOG_LEVEL")
+    model_checkpoint_path: str = Field(
+        default="checkpoints/cnn_lstm_best.pt",
+        validation_alias="MODEL_CHECKPOINT_PATH",
+    )
     dataset_root: str = Field(
         default="data/raw/archive/ISL_CSLRT_Corpus/ISL_CSLRT_Corpus",
         validation_alias="DATASET_ROOT",
@@ -30,8 +37,25 @@ class Settings(BaseSettings):
     )
 
     @property
+    def project_root(self) -> Path:
+        """Return the repository root relative to this configuration file."""
+        return Path(__file__).resolve().parents[2]
+
+    @property
+    def resolved_model_checkpoint_path(self) -> Path:
+        """Return the configured checkpoint path resolved against the repo root."""
+        candidate = Path(self.model_checkpoint_path)
+        return candidate if candidate.is_absolute() else self.project_root / candidate
+
+    @property
+    def resolved_dataset_root(self) -> Path:
+        """Return the configured dataset path resolved against the repo root."""
+        candidate = Path(self.dataset_root)
+        return candidate if candidate.is_absolute() else self.project_root / candidate
+
+    @property
     def cors_origin_list(self) -> list[str]:
-        """Return configured CORS origins as a normalized list."""
+        """Return the configured CORS origins as a normalized list."""
         return [
             origin.strip()
             for origin in self.cors_origins.split(",")
