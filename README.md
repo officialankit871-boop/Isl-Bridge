@@ -57,7 +57,16 @@ normalization, and manifest-backed sentence labels. The webcam buffer holds
 or `--show-top5` to adjust runtime behavior. Press `Q`/`ESC` to quit, `R` to
 reset the buffer, `S` to toggle top-five output, or `C` to clear the display.
 Predictions below the configured confidence threshold are displayed as
-“Uncertain”; no speech output is produced.
+“Uncertain”. To enable local, offline Windows speech for newly stabilized
+predictions, add `--speak`:
+
+```powershell
+.\.venv310\Scripts\python.exe scripts\realtime_inference.py --speak
+```
+
+Speech uses the Windows SAPI voice through PowerShell and runs outside the
+inference loop. A held sign is spoken once; another stabilized sign or clearing
+or resetting recognition allows a later announcement.
 
 ## Current limitation
 

@@ -19,6 +19,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from backend.services.inference_service import ISLInferenceService  # noqa: E402
+from backend.services.speech_service import SpeechService, SpeechTrigger  # noqa: E402
 from backend.services.landmark_service import (  # noqa: E402
     FEATURE_DIMENSION,
     prepare_sequence_for_inference,
@@ -114,6 +115,11 @@ def parse_args() -> argparse.Namespace:
         "--show-top5",
         action="store_true",
         help="Show the five highest-probability classes at startup.",
+    )
+    parser.add_argument(
+        "--speak",
+        action="store_true",
+        help="Speak each newly stabilized prediction using local Windows speech.",
     )
     return parser.parse_args()
 
@@ -440,6 +446,7 @@ def run_webcam(
     confidence_threshold: float,
     history_size: int,
     show_top5: bool,
+    speech_service: SpeechService | None = None,
 ) -> int:
     """Capture, normalize, buffer, classify, and display webcam frames."""
     mp = import_mediapipe()
@@ -459,6 +466,7 @@ def run_webcam(
 
     buffer: deque[np.ndarray] = deque(maxlen=max_frames)
     prediction_history: deque[tuple[str, float]] = deque(maxlen=history_size)
+    speech_trigger = SpeechTrigger(speech_service) if speech_service is not None else None
     display = DisplayPrediction()
     camera_rate = RollingFPS()
     inference_rate = RollingFPS()
@@ -526,6 +534,10 @@ def run_webcam(
                             display.sentence = service.sentence_for_class_id(class_id)
                             display.confidence = stable_confidence
                             display.status = "Detecting"
+                            if speech_trigger is not None:
+                                speech_trigger.on_stable_prediction(
+                                    class_id, display.sentence
+                                )
                 elif not warmed_up:
                     display.status = "Warming up"
 
@@ -549,6 +561,8 @@ def run_webcam(
                     show_top5 = not show_top5
                 elif key == ord("c"):
                     prediction_history.clear()
+                    if speech_trigger is not None:
+                        speech_trigger.reset()
                     display = DisplayPrediction(
                         sentence="Waiting for stable prediction",
                         status="Prediction cleared",
@@ -556,12 +570,16 @@ def run_webcam(
                 elif key == ord("r"):
                     buffer.clear()
                     prediction_history.clear()
+                    if speech_trigger is not None:
+                        speech_trigger.reset()
                     frames_since_reset = 0
                     normalizer = BodyNormalizer()
                     display = DisplayPrediction()
     finally:
         capture.release()
         cv2.destroyAllWindows()
+        if speech_service is not None:
+            speech_service.close()
     return 0
 
 
@@ -579,6 +597,14 @@ def main() -> int:
         args.inference_interval,
         args.confidence_threshold,
     )
+    speech_service = None
+    if args.speak:
+        try:
+            speech_service = SpeechService()
+        except RuntimeError as exc:
+            print(f"ERROR: {exc}", file=sys.stderr)
+            return 1
+        print("Local offline speech: enabled")
     return run_webcam(
         service,
         device,
@@ -588,6 +614,7 @@ def main() -> int:
         confidence_threshold=args.confidence_threshold,
         history_size=args.history_size,
         show_top5=args.show_top5,
+        speech_service=speech_service,
     )
 
 
