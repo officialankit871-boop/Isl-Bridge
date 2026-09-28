@@ -113,5 +113,13 @@ class SignRetriever:
     def get_by_sentence(self, sentence: str) -> dict[str, Any]:
         return self.find_sentence(sentence)
 
+    def iter_videos(self) -> list[dict[str, str]]:
+        """Return copies of all indexed video rows without reading the CSV again."""
+        return [
+            dict(video)
+            for record in self._sentences.values()
+            for video in record["videos"]
+        ]
+
 
 __all__ = ["SignRetriever", "normalize_text"]

@@ -75,3 +75,17 @@ The model is sentence-level sequence classification and is not yet a true contin
 ## Future
 
 Webcam → MediaPipe → sequence → API → prediction → TTS
+
+## Text-to-ISL video playback
+
+Run the FastAPI application from the project root:
+
+```powershell
+.\.venv310\Scripts\python.exe -m uvicorn backend.main:app --reload
+```
+
+Open <http://127.0.0.1:8000/> to enter an English sentence and browse its
+matching indexed ISL videos. The page calls `POST /sign/translate`; video
+variants are streamed from the safe indexed route returned by the API. Exact
+sentence matches only are supported. See [M8_VIDEO_PLAYBACK](docs/M8_VIDEO_PLAYBACK.md)
+for implementation details and tests.

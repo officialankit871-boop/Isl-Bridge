@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from backend.api.routes_health import router as health_router
 from backend.api.routes_predict import router as predict_router
@@ -88,6 +90,16 @@ def create_app() -> FastAPI:
     application.include_router(health_router)
     application.include_router(predict_router)
     application.include_router(sign_router)
+
+    frontend_root = Path(__file__).resolve().parents[1] / "frontend"
+    application.mount("/css", StaticFiles(directory=frontend_root / "css"), name="frontend-css")
+    application.mount("/js", StaticFiles(directory=frontend_root / "js"), name="frontend-js")
+    frontend_file = frontend_root / "index.html"
+
+    @application.get("/", include_in_schema=False)
+    async def frontend_index() -> FileResponse:
+        return FileResponse(frontend_file, media_type="text/html")
+
     return application
 
 

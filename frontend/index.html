@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>ISL Bridge | Text to Sign</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="ISL Bridge home">
+          <span class="brand-mark" aria-hidden="true">ISL</span>
+          <span>ISL Bridge</span>
+        </a>
+        <span class="topbar-note">Text to Indian Sign Language</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">A clearer way to connect</p>
+        <h1 id="page-title">See your sentence in sign.</h1>
+        <p class="intro-copy">Enter an English sentence to find its matching ISL video.</p>
+      </section>
+
+      <section class="search-card" aria-labelledby="search-heading">
+        <div class="section-heading">
+          <span class="step">01</span>
+          <div>
+            <h2 id="search-heading">Your sentence</h2>
+            <p>Search the sentence-level ISL video collection.</p>
+          </div>
+        </div>
+        <form id="translate-form" novalidate>
+          <label for="sentence-input">English text</label>
+          <div class="input-row">
+            <input id="sentence-input" name="text" type="text" autocomplete="off"
+              placeholder="For example: What are you doing?" aria-describedby="input-help status-message">
+            <button id="translate-button" type="submit">
+              <span class="button-label">Translate to ISL</span>
+              <span class="button-spinner" aria-hidden="true"></span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="form-meta">
+            <p id="input-help">Exact sentence matches from the ISL dataset.</p>
+            <p id="status-message" class="status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section id="result-panel" class="result-card" aria-labelledby="result-heading" hidden>
+        <div class="result-heading">
+          <div class="section-heading">
+            <span class="step">02</span>
+            <div>
+              <h2 id="result-heading">Your ISL result</h2>
+              <p id="matched-sentence" class="matched-sentence"></p>
+            </div>
+          </div>
+          <span class="match-badge"><span aria-hidden="true">●</span> Match found</span>
+        </div>
+
+        <div class="result-details">
+          <div class="gloss-block">
+            <span class="detail-label">SIGN GLOSS</span>
+            <p id="gloss-value"></p>
+          </div>
+          <div class="variant-summary">
+            <span class="detail-label">VIDEO VARIANTS</span>
+            <p><strong id="video-count">0</strong> available</p>
+          </div>
+        </div>
+
+        <div class="player-wrap">
+          <video id="sign-video" controls playsinline preload="metadata" aria-label="ISL sentence video"></video>
+        </div>
+        <div class="player-controls">
+          <button id="previous-video" class="secondary-button" type="button" aria-label="Previous video variant">← <span>Previous</span></button>
+          <p id="video-position" aria-live="polite">Video 0 of 0</p>
+          <button id="next-video" class="secondary-button" type="button" aria-label="Next video variant"><span>Next</span> →</button>
+        </div>
+      </section>
+
+      <section id="empty-state" class="empty-state" aria-live="polite">
+        <span class="empty-icon" aria-hidden="true">✳</span>
+        <p>Your matching sign video will appear here.</p>
+      </section>
+
+      <footer><span>ISL Bridge</span><span>Sentence-level video retrieval</span></footer>
+    </main>
+  </body>
+</html>
