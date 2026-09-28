@@ -13,7 +13,7 @@ from fastapi.staticfiles import StaticFiles
 
 from backend.api.routes_health import router as health_router
 from backend.api.routes_predict import router as predict_router
-from backend.api.routes_sign import get_sign_retriever, router as sign_router
+from backend.api.routes_sign import get_sign_retriever, get_text_mapper, router as sign_router
 from backend.core.config import get_settings
 from backend.core.constants import SERVICE_NAME
 from backend.services.inference_service import get_inference_service
@@ -34,6 +34,7 @@ async def lifespan(application: FastAPI):
     """Load and cache the inference model once when the backend starts."""
     settings = get_settings()
     application.state.sign_retriever = get_sign_retriever()
+    application.state.text_mapper = get_text_mapper()
     service = get_inference_service()
     application.state.inference_service = service
     logger.info(

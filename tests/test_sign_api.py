@@ -79,5 +79,6 @@ def test_existing_health_endpoint_still_works() -> None:
 
 def test_openapi_documents_sign_endpoint() -> None:
     operation = client.get("/openapi.json").json()["paths"]["/sign/translate"]["post"]
-    assert "Retrieve an exact sentence-level Indian Sign Language video mapping." in operation["description"]
+    assert "Retrieve an exact sentence-level Indian Sign Language video mapping, or resolve a reviewed CSV alias to one." in operation["description"]
+    assert "The endpoint does not perform fuzzy translation." in operation["description"]
     assert "fuzzy translation" in operation["description"]

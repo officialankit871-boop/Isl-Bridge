@@ -7,6 +7,7 @@ const statusMessage = document.querySelector("#status-message");
 const resultPanel = document.querySelector("#result-panel");
 const emptyState = document.querySelector("#empty-state");
 const matchedSentence = document.querySelector("#matched-sentence");
+const matchBadge = document.querySelector(".match-badge");
 const glossValue = document.querySelector("#gloss-value");
 const videoCount = document.querySelector("#video-count");
 const video = document.querySelector("#sign-video");
@@ -25,7 +26,7 @@ function setStatus(message, kind = "") {
 function setLoading(loading) {
   translateButton.disabled = loading;
   translateButton.classList.toggle("is-loading", loading);
-  translateButton.querySelector(".button-label").textContent = loading ? "Searching…" : "Translate to ISL";
+  translateButton.querySelector(".button-label").textContent = loading ? "SearchingÃ¢â‚¬Â¦" : "Translate to ISL";
   form.setAttribute("aria-busy", String(loading));
 }
 
@@ -42,7 +43,7 @@ function clearResult() {
 function showUnknown() {
   clearResult();
   emptyState.querySelector("p").textContent = "No matching ISL video found for this sentence.";
-  setStatus("No exact sentence match was found.");
+  setStatus("No supported match was found.");
 }
 
 function renderVariant() {
@@ -60,12 +61,13 @@ function showMatch(result) {
   variants = result.videos;
   currentVariant = 0;
   matchedSentence.textContent = result.sentence || result.sentence_normalized;
+  matchBadge.textContent = result.match_type === "alias" ? "Alias match" : "Exact match";
   glossValue.textContent = result.gloss;
   videoCount.textContent = String(result.video_count);
   emptyState.hidden = true;
   resultPanel.hidden = false;
   renderVariant();
-  setStatus("Matching sentence found.", "success");
+  setStatus(result.match_type === "alias" ? "Supported alias matched." : "Exact sentence matched.", "success");
 }
 
 form.addEventListener("submit", async (event) => {

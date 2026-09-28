@@ -13,6 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from backend.core.config import get_settings
 from backend.services.sign_retriever import SignRetriever
+from backend.services.text_mapper import TextMapper
 
 router = APIRouter(tags=["sign"])
 
@@ -42,6 +43,7 @@ class SignVideo(BaseModel):
 
 class SignTranslateResponse(BaseModel):
     matched: bool
+    match_type: str
     sentence: str
     sentence_normalized: str
     gloss: str | None
@@ -55,6 +57,12 @@ class SignTranslateResponse(BaseModel):
 def get_sign_retriever() -> SignRetriever:
     """Create one process-wide retriever on demand; loading errors propagate."""
     return SignRetriever()
+
+
+@lru_cache(maxsize=1)
+def get_text_mapper() -> TextMapper:
+    """Create one process-wide mapper using the existing cached retriever."""
+    return TextMapper(get_sign_retriever())
 
 
 def video_id_for_path(video_path: str) -> str:
@@ -75,11 +83,10 @@ def get_indexed_video_map() -> dict[str, str]:
 @router.post(
     "/sign/translate",
     response_model=SignTranslateResponse,
-    summary="Retrieve an exact sentence-level Indian Sign Language video mapping.",
+    summary="Map supported text to an Indian Sign Language video mapping.",
     description=(
-        "Retrieve an exact sentence-level Indian Sign Language video mapping. "
-        "This endpoint uses exact sentence retrieval and does not perform "
-        "semantic or fuzzy translation."
+        "Retrieve an exact sentence-level Indian Sign Language video mapping, "
+        "or resolve a reviewed CSV alias to one. The endpoint does not perform fuzzy translation."
     ),
 )
 async def translate_sign(payload: SignTranslateRequest, request: Request) -> dict[str, Any]:
@@ -87,7 +94,13 @@ async def translate_sign(payload: SignTranslateRequest, request: Request) -> dic
     retriever = getattr(request.app.state, "sign_retriever", None)
     if retriever is None:
         retriever = get_sign_retriever()
-    result = retriever.find_sentence(payload.text)
+    mapper = getattr(request.app.state, "text_mapper", None) or get_text_mapper()
+    mapping = mapper.map_text(payload.text)
+    if mapping["matched"]:
+        result = retriever.find_sentence(mapping["canonical_sentence"])
+    else:
+        result = retriever.find_sentence(payload.text)
+    result["match_type"] = mapping["match_type"]
     for video in result["videos"]:
         video_id = video_id_for_path(video["video_path"])
         video["video_id"] = video_id
@@ -113,4 +126,4 @@ async def get_sign_video(video_id: str) -> FileResponse:
     return FileResponse(video_path, media_type="video/mp4", filename=video_path.name)
 
 
-__all__ = ["router", "get_sign_retriever", "video_id_for_path"]
+__all__ = ["router", "get_sign_retriever", "get_text_mapper", "video_id_for_path"]
