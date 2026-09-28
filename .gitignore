@@ -303,5 +303,9 @@ data/processed/landmarks/*.npy
 
 # Backup manifest
 data/manifests/manifest_backup.csv
-data/processed/landmarks/*
+data/processed/landmarks/
+data/processed/landmarks_v2/
+data/processed/features_presence_aware/
+data/processed/features_presence_gated/
+data/processed/landmark_metadata_v2/
 !data/processed/landmarks/.gitkeep
